@@ -1,13 +1,8 @@
 <?php
-$a = rand(-100,100);
-$b = rand(-100,100);
-
-if ($a >= 0 && $b >= 0) {
-    echo $a - $b;
-}
-elseif ($a < 0 && $b < 0) {
-    echo $a * $b;
-}
-else {
-    echo $a + $b;
+$a = 0;
+while ($a <= 100) {
+    if (!($a % 3) && $a) {
+        echo $a . " ";
+    }
+    $a++;
 }

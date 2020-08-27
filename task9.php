@@ -14,6 +14,17 @@ function transliteration($txt){
         'э' => 'e',   'ю' => 'yu',  'я' => 'ya'
     ];
     return strtr($txt, $chars);
-};
+}
 
-echo transliteration("объявил массив, который переводит русский текст в транслит");
+function replace($text)
+{
+    return str_replace(' ', '_', $text);
+}
+
+function getMyText($text)
+{
+    $text = transliteration($text);
+    return replace($text);
+}
+
+echo getMyText('написал текст, который переводится в транстил и пробел зменяются на подчеркивания');
